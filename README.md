@@ -31,7 +31,7 @@ For more information see:
 
 [Microsoft Sentinel Data Collector API](https://docs.microsoft.com/azure/sentinel/connect-rest-api-template)  
 
-[Logic App Overview](https://azure.microsoft.com/services/logic-apps/)
+[Azure Functions Overview](https://docs.microsoft.com/azure/azure-functions/functions-overview)
 
 <br>
 <br>
