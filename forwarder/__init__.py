@@ -15,7 +15,7 @@ customer_id = os.environ['customer_id']
 shared_key = os.environ['shared_key']
 
 # The log type is the name of the event that is being submitted
-log_type = os.environ['CloudGuardCSPM']
+log_type = os.environ['log_type']
 
 # Build the API signature
 def build_signature(customer_id, shared_key, date, content_length, method, content_type, resource):
