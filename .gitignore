@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.DS_Store
+.gitignore
+local.settings.json
+.gitattributes
 # C extensions
 *.so
 
