@@ -45,7 +45,7 @@
         "funcAppName": "[toLower(concat(parameters('baseName'), '-proxy-', variables('suffix')))]",
         "funcStorageName": "[concat(parameters('StorageAccountName'))]",
         "serverFarmName": "[concat(substring(parameters('baseName'), 0, min(length(parameters('baseName')),14)), variables('suffix'))]",
-        "repoURL": "https://github.com/chkp-jguo/cloudguard_cspm_forwarder.git",
+        "repoURL": "https://github.com/chkp-jguo/CloudGuard_CSPM_notification_webhook_forwarder.git",
         "srcControlsName": "web",
         "GitHubBranch": "main"
     },
