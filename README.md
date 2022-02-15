@@ -65,7 +65,7 @@ For more information see:
 
 2. Launch Template
 
-    [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchkp-jguo%2Fcloudguard_cspm_forwarder%2Fmain%2FdeployCP.json)
+    [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchkp-jguo%2FCloudGuard_CSPM_notification_webhook_forwarder%2Fmain%2FdeployCP.json)
 
 
 3. Fill template details
