@@ -59,9 +59,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     headers = dict(req.headers)
     phpuser = str(headers['php-auth-user'])
     phpuserpw = str(headers['php-auth-pw'])
+    body = json.dumps(req.get_json())
     global cspm_usr
     global cspm_pwd
-    body = json.dumps(req.get_json())
     
     if (cspm_usr == phpuser and cspm_pwd == phpuserpw):
         post_data(customer_id, shared_key, body, log_type)
