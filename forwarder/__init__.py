@@ -17,6 +17,12 @@ shared_key = os.environ['shared_key']
 # The log type is the name of the event that is being submitted
 log_type = os.environ['log_type']
 
+# CSPM notiifcation Username
+cspm_usr == os.environ['cspm_usr']
+
+# CSPM notification Password
+cspm_pwd == os.environ['cspm_pwd']
+
 # Build the API signature
 def build_signature(customer_id, shared_key, date, content_length, method, content_type, resource):
     x_headers = 'x-ms-date:' + date
@@ -50,7 +56,13 @@ def post_data(customer_id, shared_key, body, log_type):
         print("Response code: {}".format(response.status_code))
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    req_body = req.get_json()
-    body = json.dumps(req_body)
-    post_data(customer_id, shared_key, body, log_type)
-    return func.HttpResponse(f"{print(body)}")
+    headers = dict(req.headers)
+    phpuser = str(headers['php-auth-user'])
+    phpuserpw = str(headers['php-auth-pw'])
+    body = json.dumps(req.get_json())
+    
+    if (cspm_usr == phpuser and cspm_pwd == phpuserpw):
+        post_data(customer_id, shared_key, body, log_type)
+        return func.HttpResponse("", status_code=200)
+    else:
+        return func.HttpResponse("", status_code=400)

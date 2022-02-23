@@ -38,6 +38,20 @@
            "metadata" : {
                 "description": "Log type name that will display in Microsoft Sentinel"
             }
+        },
+        "cspm_usr": {
+           "type": "string",
+            "defaultValue": "From CloudGuard CSPM Notification username",
+           "metadata" : {
+                "description": "CSPM notification username"
+            }
+        },
+        "cspm_pw": {
+           "type": "string",
+            "defaultValue": "From CloudGuard CSPM Notification password",
+           "metadata" : {
+                "description": "CSPM notification password"
+            }
         }
     },
     "variables": {
@@ -89,6 +103,14 @@
                         {
                             "name": "log_type",
                             "value": "[parameters('log_type')]"
+                        },
+                        {
+                            "name": "cspm_usr",
+                            "value": "[parameters('cspm_usr')]"
+                        },
+                        {
+                            "name": "cspm_pw",
+                            "value": "[parameters('cspm_pw')]"
                         },
                         {
                             "name": "FUNCTIONS_EXTENSION_VERSION",
