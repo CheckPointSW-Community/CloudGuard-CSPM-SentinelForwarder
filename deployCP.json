@@ -106,11 +106,11 @@
                         },
                         {
                             "name": "cg_cspm_usr",
-                            "value": "[parameters('cspm_usr')]"
+                            "value": "[parameters('cg_cspm_usr')]"
                         },
                         {
                             "name": "cg_cspm_pw",
-                            "value": "[parameters('cspm_pw')]"
+                            "value": "[parameters('cp_cspm_pw')]"
                         },
                         {
                             "name": "FUNCTIONS_EXTENSION_VERSION",
