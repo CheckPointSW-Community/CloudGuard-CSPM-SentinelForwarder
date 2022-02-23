@@ -20,14 +20,14 @@
         },
         "customer_id": {
             "type": "string",
-            "defaultValue": "Customer ID from Microsoft Sentinel",
+            "defaultValue": "Microsoft Sentinel Customer ID",
             "metadata": {
                 "description": "Customer ID from Microsoft Sentinel"
             }
         },
         "shared_key": {
            "type": "string",
-           "defaultValue": "Shared Key from Microsoft Sentinel",
+           "defaultValue": "Microsoft Sentinel Shared Key ",
            "metadata" : {
                 "description": "Shared Key from Microsoft Sentinel"
             }
@@ -39,18 +39,18 @@
                 "description": "Log type name that will display in Microsoft Sentinel"
             }
         },
-        "cspm_usr": {
+        "cg_cspm_usr": {
            "type": "string",
-            "defaultValue": "From CloudGuard CSPM Notification username",
+            "defaultValue": "CSPM notification username",
            "metadata" : {
-                "description": "CSPM notification username"
+                "description": "Username from CloudGuard CSPM Notification"
             }
         },
-        "cspm_pw": {
+        "cg_cspm_pw": {
            "type": "string",
-            "defaultValue": "From CloudGuard CSPM Notification password",
+            "defaultValue": "CSPM notification password",
            "metadata" : {
-                "description": "CSPM notification password"
+                "description": "Password from CloudGuard CSPM Notification"
             }
         }
     },
@@ -105,11 +105,11 @@
                             "value": "[parameters('log_type')]"
                         },
                         {
-                            "name": "cspm_usr",
+                            "name": "cg_cspm_usr",
                             "value": "[parameters('cspm_usr')]"
                         },
                         {
-                            "name": "cspm_pw",
+                            "name": "cg_cspm_pw",
                             "value": "[parameters('cspm_pw')]"
                         },
                         {
