@@ -20,14 +20,14 @@
         },
         "customer_id": {
             "type": "string",
-            "defaultValue": "Microsoft Sentinel Customer ID",
+            "defaultValue": "Microsoft Sentinel Workspace ID",
             "metadata": {
                 "description": "Customer ID from Microsoft Sentinel"
             }
         },
         "shared_key": {
            "type": "string",
-           "defaultValue": "Microsoft Sentinel Shared Key ",
+           "defaultValue": "Microsoft Sentinel Workspace Key ",
            "metadata" : {
                 "description": "Shared Key from Microsoft Sentinel"
             }
@@ -46,7 +46,7 @@
                 "description": "Username from CloudGuard CSPM Notification"
             }
         },
-        "cspm_pw": {
+        "cspm_pwd": {
            "type": "string",
             "defaultValue": "CSPM notification password",
            "metadata" : {
@@ -109,8 +109,8 @@
                             "value": "[parameters('cspm_usr')]"
                         },
                         {
-                            "name": "cspm_pw",
-                            "value": "[parameters('cspm_pw')]"
+                            "name": "cspm_pwd",
+                            "value": "[parameters('cspm_pwd')]"
                         },
                         {
                             "name": "FUNCTIONS_EXTENSION_VERSION",
