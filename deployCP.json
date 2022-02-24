@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "metadata": {
       "author": "John Guo | Check Point Software Technologies",
-      "comments": "Check Point CloudGuard CSPM notification to Microsoft Sentinel"
+      "comments": "Check Point CloudGuard CSPM notifications to Microsoft Sentinel"
     },
     "parameters": {
         "baseName": {
@@ -47,7 +47,8 @@
             }
         },
         "cspm_pwd": {
-           "type": "string",
+           "type": "securestring",
+           "minLength": 10,
             "defaultValue": "CSPM notification password",
            "metadata" : {
                 "description": "Password from CloudGuard CSPM Notification"
@@ -77,6 +78,7 @@
             "kind": "functionapp,linux",
             "properties": {
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('serverFarmName'))]",
+                "httpsOnly": true,
                 "siteConfig": {
                     "alwaysOn": true,
                     "appSettings": [
