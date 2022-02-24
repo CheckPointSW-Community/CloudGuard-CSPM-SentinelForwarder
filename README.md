@@ -1,4 +1,4 @@
-# Cloudguard CSPM webhook forwarder for Microsoft Sentinel
+# CloudGuard CSPM Webhook Forwarder for Microsoft Sentinel
 <br>
 <br>
 <p align="center">  
