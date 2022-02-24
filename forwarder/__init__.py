@@ -18,10 +18,11 @@ shared_key = os.environ['shared_key']
 log_type = os.environ['log_type']
 
 # CSPM notiifcation Username
-cspm_usr == os.environ['cspm_usr']
+cspm_usr = os.environ['cspm_usr']
 
 # CSPM notification Password
-cspm_pwd == os.environ['cspm_pwd']
+cspm_pwd = os.environ['cspm_pwd']
+
 
 # Build the API signature
 def build_signature(customer_id, shared_key, date, content_length, method, content_type, resource):
