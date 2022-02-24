@@ -1,5 +1,3 @@
-import logging
-from re import A
 import requests
 import azure.functions as func
 import os
@@ -18,13 +16,9 @@ shared_key = os.environ['shared_key']
 # The log type is the name of the event that is being submitted
 log_type = os.environ['log_type']
 
-# CSPM notiifcation Username
-cspm_usr = os.environ['cspm_usr']
-
-# CSPM notification Password
+# CSPM notification Auth
 cspm_pwd = os.environ['cspm_pwd']
-
-# Enc
+cspm_usr = os.environ['cspm_usr']
 usr_pw = cspm_usr + ":" + cspm_pwd
 enc_usr_pw = "Basic " + base64.b64encode(usr_pw.encode("utf-8")).decode('ascii')
 
