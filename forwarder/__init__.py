@@ -1,4 +1,5 @@
 import logging
+from re import A
 import requests
 import azure.functions as func
 import os
@@ -23,6 +24,9 @@ cspm_usr = os.environ['cspm_usr']
 # CSPM notification Password
 cspm_pwd = os.environ['cspm_pwd']
 
+# Enc
+usr_pw = cspm_usr + ":" + cspm_pwd
+enc_usr_pw = "Basic " + base64.b64encode(usr_pw.encode("utf-8")).decode('ascii')
 
 # Build the API signature
 def build_signature(customer_id, shared_key, date, content_length, method, content_type, resource):
@@ -58,13 +62,11 @@ def post_data(customer_id, shared_key, body, log_type):
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     headers = dict(req.headers)
-    phpuser = str(headers['php-auth-user'])
-    phpuserpw = str(headers['php-auth-pw'])
+    cg_cspm_enc = headers['authorization']
     body = json.dumps(req.get_json())
-    global cspm_usr
-    global cspm_pwd
+    global enc_usr_pw
     
-    if (cspm_usr == phpuser and cspm_pwd == phpuserpw):
+    if (cg_cspm_enc == enc_usr_pw):
         post_data(customer_id, shared_key, body, log_type)
         return func.HttpResponse("", status_code=200)
     else:
