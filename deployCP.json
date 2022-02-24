@@ -49,7 +49,6 @@
         "cspm_pwd": {
            "type": "securestring",
            "minLength": 10,
-            "defaultValue": "CSPM notification password",
            "metadata" : {
                 "description": "Password from CloudGuard CSPM Notification"
             }
