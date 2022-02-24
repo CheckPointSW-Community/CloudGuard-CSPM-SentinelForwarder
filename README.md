@@ -90,10 +90,14 @@ For more information see:
     c. Fill in the details
     
     d. Endpoint url - make sure to include the following at end of function URL "/api/forwarder/"
+
+    e. Select "Basic" Authentication Type
+
+    f. Input CSPM username and password from step 3 above
     
-    e. Test endpoint
+    g. Test endpoint
     
-    f. Save notification policy
+    h. Save notification policy
 
     Example: 
 
